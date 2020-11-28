@@ -6,6 +6,7 @@ services:
 before_install:
     - docker build -t rumlauf/docker-react -f Dockerfile.dev .
 
+# Commands that need to be executed to run the tests
 script:    
     - docker run -e CI=true rumlauf/docker-react npm run test
 
